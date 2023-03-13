@@ -1,5 +1,8 @@
 package swing.frame;
 
+import java.awt.FlowLayout;
+
+import javax.swing.JButton;
 import javax.swing.JFrame;
 
 public class MyFrame extends JFrame {
@@ -10,15 +13,15 @@ public class MyFrame extends JFrame {
 		setSize(300, 300);
 //		frame.setLocation(500, 300);
 		setLocationRelativeTo(null);
+		
+		// 레이아웃 설정
+		setLayout(new FlowLayout());
+		
+		// 컴포넌트 추가
+		JButton button = new JButton("버튼");
+		add(button);
+		
 		setVisible(true);
-	}
-
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		new MyFrame("나의 프레임");
-		
-		
 	}
 
 }
